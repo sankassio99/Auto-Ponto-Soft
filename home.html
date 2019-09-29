@@ -12,62 +12,42 @@
   		h1{
   			font: Segoe UI;
   		}
-
-  	   #butao  {
-  			margin-left: 1px ;
-  			margin-right: 1px ;
-  			margin-top: -30px ;
-  		}
   		#btn {
-			width: 450px  ; 
+			width: 345px  ; 
+			height: 70px ;
   			border-radius: 0px ; 
   			font: Segoe UI;
   			font-size: 20pt ;
   			margin: 1px ;
-  		}
-		#sub {
-			margin-left: 170px ;
+  		} 
+		#menu {
+			margin: 0px ;
 		}  
-		.intervalos{
-			background-color:#DCDCDC ;
-			margin-bottom: 10px ;
-		}
-		#reload{
-			margin: auto ;
-			display: flex ;
-			justify-content: center ;
-		}
-		#pag1{
-			margin: auto ;
-			float: center ;
-			justify-content: center ;
-		}
-		#pag2{
-			padding-left: 0px ; 
-		}
+
+		
 		
   	</style>
   	<script src="script2.js"></script>
 </head>
 <body>
-	<div class="row">
-		<div id="pag1" class="col-sm-4" style="background-color:yellow;">
-			<div class="jumbotron pb-1 pt-3 ">
-				<sub>Versão Beta 1.0</sub>
-				<h1>Auto Ponto Soft</h1>
-				<label>Ecolha um turno</label>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12" >
+				<div class="jumbotron pb-1 pt-3 " id="menu">
+						<sub>Versão Beta 1.0</sub>
+						<h1>Auto Ponto Soft</h1>
+						<label>Ecolha um turno</label>
+					</div>
+					<div class="btn-group-vertical col-xs-12" id="butao">
+						<button class="btn btn-dark" id="btn">Alfa</button>
+						<button class="btn btn-dark" id="btn">Bravo</button>
+						<button class="btn btn-dark" id="btn">Charlie</button>
+						<button class="btn btn-dark" id="btn">Delta</button>
+						<button class="btn btn-dark" id="btn">Folga</button> 
+				</div>
 			</div>
-			<div class="btn-group-vertical" id="butao">
-				<button class="btn btn-dark" id="btn">Alfa</button>
-				<button class="btn btn-dark" id="btn">Bravo</button>
-				<button class="btn btn-dark" id="btn">Charlie</button>
-				<button class="btn btn-dark" id="btn">Delta</button>
-				<button class="btn btn-dark" id="btn">Folga</button> 
-			</div>
-		</div>
-		<div id="pag2" class="col-sm-4" style="background-color:orange;">
-			<div id="conteudo" class="col-sm-4">
-				<table class="table table-hover "> 
+			<div class="col-sm-4 col-xs-12" style="background-color:lime">
+				<table class="table table-hover"> 
 					<thead>
 						<tr class="bg-success h5">
 							<td>Dia</td>
@@ -82,18 +62,18 @@
 					<tbody id="linha">
 
 					</tbody>
-				</table>	
+				</table>
 			</div>
-		</div>
-		<div id="pag3" class="col-sm-4" >
-			<div id="minIntervalos" class="intervalos">
-				<p>Tempo dos intervalos sequentes: </p>
-			</div>	
-			<button id="reload" type="button" class="btn btn-danger btn-lg">
-				<span ></span> Reload 
-			</button>
-		
+			<div class="col-sm-4 col-xs-12" style="background-color: lightgreen">
+				<div id="minIntervalos" class="intervalos">
+					<p>Tempo dos intervalos sequentes: </p>
+				</div>	
+				<button id="reload" type="button" class="btn btn-danger btn-lg">
+					<span ></span> Reload 
+				</button>
+			</div>
 		</div>
 	</div>
 </body>
 </html>
+
