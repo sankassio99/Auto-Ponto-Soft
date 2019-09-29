@@ -8,33 +8,25 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
   	<style type="text/css">
-      body {
-        margin: auto ;
-        width: 500px ;
-        justify-content: center ;
-        float: center ;
 
-      }
   		h1{
   			font: Segoe UI;
   		}
-  		div {
-  			text-align: center ;
-  			width: 500px ;
-  		}
-  	  #butao  {
+
+  	   #butao  {
   			margin-left: 1px ;
   			margin-right: 1px ;
   			margin-top: -30px ;
   		}
   		#btn {
+			width: 450px  ; 
   			border-radius: 0px ; 
   			font: Segoe UI;
   			font-size: 20pt ;
   			margin: 1px ;
   		}
 		#sub {
-			margin-left: -40px ;
+			margin-left: 170px ;
 		}  
 		.intervalos{
 			background-color:#DCDCDC ;
@@ -45,55 +37,63 @@
 			display: flex ;
 			justify-content: center ;
 		}
+		#pag1{
+			margin: auto ;
+			float: center ;
+			justify-content: center ;
+		}
+		#pag2{
+			padding-left: 0px ; 
+		}
 		
   	</style>
   	<script src="script2.js"></script>
 </head>
 <body>
-	<header>
-			
-		<div class="jumbotron pb-1 pt-3 ">
-			<sub>Versão Beta 1.0</sub>
-			<h1>Auto Ponto Soft</h1>
-			<label>Ecolha um turno</label>
+	<div class="row">
+		<div id="pag1" class="col-sm-4" style="background-color:yellow;">
+			<div class="jumbotron pb-1 pt-3 ">
+				<sub>Versão Beta 1.0</sub>
+				<h1>Auto Ponto Soft</h1>
+				<label>Ecolha um turno</label>
+			</div>
+			<div class="btn-group-vertical" id="butao">
+				<button class="btn btn-dark" id="btn">Alfa</button>
+				<button class="btn btn-dark" id="btn">Bravo</button>
+				<button class="btn btn-dark" id="btn">Charlie</button>
+				<button class="btn btn-dark" id="btn">Delta</button>
+				<button class="btn btn-dark" id="btn">Folga</button> 
+			</div>
 		</div>
-		<div class="btn-group-vertical" id="butao">
-			<button class="btn btn-dark" id="btn">Alfa</button>
-			<button class="btn btn-dark" id="btn">Bravo</button>
-			<button class="btn btn-dark" id="btn">Charlie</button>
-			<button class="btn btn-dark" id="btn">Delta</button>
-			<button class="btn btn-dark" id="btn">Folga</button> 
-		</div>
-	</header>
-  <hr>
-  <section>
-	<div id="conteudo">
-		<table class="table table-hover "> 
-			<thead>
-				<tr class="bg-success h5">
-					<td>Dia</td>
-					<td>Entrada</td>
-					<sub id="sub">intervalo</sub>
-					<td class="bg-secondary">de</td>
-					<td class="bg-secondary">às</td>
-					<td>Saída</td>
-					<td>Turno</td>
-				</tr>
-			</thead>
-			<tbody id="linha">
+		<div id="pag2" class="col-sm-4" style="background-color:orange;">
+			<div id="conteudo" class="col-sm-4">
+				<table class="table table-hover "> 
+					<thead>
+						<tr class="bg-success h5">
+							<td>Dia</td>
+							<td>Entrada</td>
+							<sub id="sub">intervalo</sub>
+							<td class="bg-secondary">de</td>
+							<td class="bg-secondary">às</td>
+							<td>Saída</td>
+							<td>Turno</td>
+						</tr>
+					</thead>
+					<tbody id="linha">
 
-			</tbody>
-		</table>	
-	</div>
-	<div id="minIntervalos" class="intervalos">
-		<p>Tempo dos intervalos sequentes: </p>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+		<div id="pag3" class="col-sm-4" >
+			<div id="minIntervalos" class="intervalos">
+				<p>Tempo dos intervalos sequentes: </p>
+			</div>	
+			<button id="reload" type="button" class="btn btn-danger btn-lg">
+				<span ></span> Reload 
+			</button>
 		
+		</div>
 	</div>
-	<button id="reload" type="button" class="btn btn-danger btn-lg">
-		<span ></span> Reload 
-	  </button>
-	<footer class="bg-dark">
-		
-	</footer>
 </body>
 </html>
