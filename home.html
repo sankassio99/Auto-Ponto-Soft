@@ -13,7 +13,7 @@
   			font: Segoe UI;
   		}
   		#btn {
-			width: 345px  ; 
+			width: 1000px  ; 
 			height: 70px ;
   			border-radius: 0px ; 
   			font: Segoe UI;
@@ -30,50 +30,44 @@
   	<script src="script2.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-4 col-xs-12" >
-				<div class="jumbotron pb-1 pt-3 " id="menu">
-						<sub>Versão Beta 1.0</sub>
-						<h1>Auto Ponto Soft</h1>
-						<label>Ecolha um turno</label>
-					</div>
-					<div class="btn-group-vertical col-xs-12" id="butao">
-						<button class="btn btn-dark" id="btn">Alfa</button>
-						<button class="btn btn-dark" id="btn">Bravo</button>
-						<button class="btn btn-dark" id="btn">Charlie</button>
-						<button class="btn btn-dark" id="btn">Delta</button>
-						<button class="btn btn-dark" id="btn">Folga</button> 
-				</div>
-			</div>
-			<div class="col-sm-4 col-xs-12" style="background-color:lime">
-				<table class="table table-hover"> 
-					<thead>
-						<tr class="bg-success h5">
-							<td>Dia</td>
-							<td>Entrada</td>
-							<sub id="sub">intervalo</sub>
-							<td class="bg-secondary">de</td>
-							<td class="bg-secondary">às</td>
-							<td>Saída</td>
-							<td>Turno</td>
-						</tr>
-					</thead>
-					<tbody id="linha">
 
-					</tbody>
-				</table>
-			</div>
-			<div class="col-sm-4 col-xs-12" style="background-color: lightgreen">
-				<div id="minIntervalos" class="intervalos">
-					<p>Tempo dos intervalos sequentes: </p>
-				</div>	
-				<button id="reload" type="button" class="btn btn-danger btn-lg">
-					<span ></span> Reload 
-				</button>
-			</div>
-		</div>
-	</div>
+    <div class="jumbotron pb-1 pt-3 " id="menu">
+        <sub>Versão Beta 1.0</sub>
+        <h1>Auto Ponto Soft</h1>
+        <label>Ecolha um turno</label>
+    </div>
+    <div class="btn-group-vertical col-xs-12" id="butao">
+        <button class="btn btn-dark" id="btn">Alfa</button>
+        <button class="btn btn-dark" id="btn">Bravo</button>
+        <button class="btn btn-dark" id="btn">Charlie</button>
+        <button class="btn btn-dark" id="btn">Delta</button>
+        <button class="btn btn-dark" id="btn">Folga</button> 
+    </div>
+        
+    <table class="table table-hover"> 
+        <thead>
+            <tr class="bg-success h5">
+                <td>Dia</td>
+                <td>Entrada</td>
+                <sub id="sub">intervalo</sub>
+                <td class="bg-secondary">de</td>
+                <td class="bg-secondary">às</td>
+                <td>Saída</td>
+                <td>Turno</td>
+            </tr>
+        </thead>
+        <tbody id="linha">
+
+        </tbody>
+    </table>
+        
+    <div id="minIntervalos" class="intervalos">
+        <p>Tempo dos intervalos sequentes: </p>
+    </div>	
+    <button id="reload" type="button" class="btn btn-danger btn-lg">
+        <span ></span> Reload 
+    </button>
+		
 </body>
 </html>
 
