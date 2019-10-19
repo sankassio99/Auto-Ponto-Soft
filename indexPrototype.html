@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
+    <script src="script2.js"></script>
+    <style>
+        #menu{
+            position: fixed ;
+        }
+        #botoes{
+            top: 15%;
+            margin-left: -20px ;
+        }
+        #tabela{
+            padding-top: 130px ;
+            margin-bottom: 0px ;
+        }
+        .cabeca{
+            background-color:  #e9ecef ;
+        }
+        #nav {
+            background-color: #e9ecef ; 
+        }
+        #btn {
+            font-size: 20px ;
+        }
+        #minIntervalos {
+            background-color: #e9ecef ;
+            padding-bottom: 80px ;
+        }
+        .inter {
+            background-color: #0056B3 ;
+        }
+        #footer {
+            
+            text-align: center ;
+            position: fixed ;
+            padding-top: 120px ;
+            padding-left: 30px ;
+        }
+        
+        
+        
+    </style>  
+</head>
+<body>
+    <!-- <header>
+        
+    </header> -->
+
+    <div class="container-fluid">
+            
+        <div class="row">
+                
+            <div class="col-sm-3 col-xs-0">
+                   
+            </div>
+            <div class="cabeca col-sm-6 sticky-top" id="menu">
+                <sub>Versão Beta 1.1</sub>
+                <h1 style="padding-top: 20px ;">Auto Ponto Soft</h1>
+                <label>Ecolha um turno</label>
+                <div class="btn-group col-xs-12 bg-dark " id="botoes">
+                    <button class="btn btn-outline-primary btn-sm" id="btn">ALFA</button>
+                    <button class="btn btn-outline-primary btn-sm" id="btn">BRAVO</button>
+                    <button class="btn btn-outline-primary btn-sm" id="btn">CHARLIE</button>
+                    <button class="btn btn-outline-primary btn-sm" id="btn">DELTA</button>
+                    <button class="btn btn-outline-primary btn-sm" id="btn">FOLGA</button> 
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-0">
+                    
+            </div>
+        </div>    
+        <hr>
+        <div class="row"> 
+            <div class="col-sm-3">
+                    
+            </div>
+            <div id="tabela"  class="col-sm-6">
+                <table class="table table-hover" > 
+                    <thead>
+                        <tr class="bg-primary">
+                            <td>Dia</td>
+                            <td>Entrada</td>
+                            <sub id="sub">intervalo</sub>
+                            <td class="inter">de</td>
+                            <td class="inter">às</td>
+                            <td>Saída</td>
+                            <td>Turno</td>
+                        </tr>
+                    </thead>
+                    <tbody id="linha">
+            
+                    </tbody>
+                </table>    
+            </div>
+            <div class="col-sm-3">
+                    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6" id="minIntervalos">
+                <p>Tempo dos intervalos sequentes: </p>
+            </div>
+            <div class="col-sm-3"></div>
+        </div> 
+        <div class="row">
+            <div class="col-sm-3">
+                    
+            </div>
+            <div class="footer col-sm-6 container fixed-bottom" id="menu">
+                <button id="reload" type="button" class="btn btn-danger btn-lg ">
+                    <span ></span> Reload 
+                </button>
+                <button id="apagar" type="button" class="btn btn-dark btn-lg ">
+                    <span ></span> Apagar 
+                </button>
+                <button id="ajuda" type="button" class="btn btn-info btn-lg  ">
+                    <span ></span> Ajuda 
+                </button>
+            </div>
+            <div class="col-sm-3 ">
+                    
+            </div>
+            
+        </div>  
+            
+    </div>   
+</body>
+</html>
