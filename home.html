@@ -11,9 +11,10 @@
     <script src="script2.js"></script>
     <style>
         #menu{
-            position: fixed ;
+            position:  ;
         }
         #botoes{
+            width: 440px ;
             top: 15%;
             margin-left: -20px ;
         }
@@ -28,6 +29,7 @@
             background-color: #e9ecef ; 
         }
         #btn {
+            
             font-size: 20px ;
         }
         #minIntervalos {
@@ -44,7 +46,12 @@
             padding-top: 120px ;
             padding-left: 30px ;
         }
-        
+        #tabela {
+            width: 420px ;
+        }
+        #corpo{
+            width: 450px ;
+        }
         
         
     </style>  
@@ -54,36 +61,35 @@
         
     </header> -->
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="corpo">
             
         <div class="row">
                 
             <div class="col-sm-3 col-xs-0">
                    
             </div>
-            <div class="cabeca col-sm-6 sticky-top" id="menu">
+            <div class="cabeca col-sm-6 col-xs-12" id="menu">
                 <sub>Versão Beta 1.1</sub>
                 <h1 style="padding-top: 20px ;">Auto Ponto Soft</h1>
                 <label>Ecolha um turno</label>
-                <div class="btn-group col-xs-12 bg-dark " id="botoes">
-                    <button class="btn btn-outline-primary btn-sm" id="btn">ALFA</button>
-                    <button class="btn btn-outline-primary btn-sm" id="btn">BRAVO</button>
-                    <button class="btn btn-outline-primary btn-sm" id="btn">CHARLIE</button>
-                    <button class="btn btn-outline-primary btn-sm" id="btn">DELTA</button>
-                    <button class="btn btn-outline-primary btn-sm" id="btn">FOLGA</button> 
+                <div class="btn-group bg-dark" id="botoes">
+                    <button class="btn btn-outline-primary " id="btn">ALFA</button>
+                    <button class="btn btn-outline-primary " id="btn">BRAVO</button>
+                    <button class="btn btn-outline-primary " id="btn">CHARLIE</button>
+                    <button class="btn btn-outline-primary " id="btn">DELTA</button> 
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-0">
+            <div class="col-sm-2 col-xs-3">
                     
             </div>
         </div>    
         <hr>
         <div class="row"> 
-            <div class="col-sm-3">
+            <div class="col-sm-0">
                     
             </div>
-            <div id="tabela"  class="col-sm-6">
-                <table class="table table-hover" > 
+            <div id=""  class="col-sm-8 col-xs-12">
+                <table class="table table-hover " id="tabela"> 
                     <thead>
                         <tr class="bg-primary">
                             <td>Dia</td>
@@ -100,7 +106,7 @@
                     </tbody>
                 </table>    
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                     
             </div>
         </div>
@@ -115,15 +121,18 @@
             <div class="col-sm-3">
                     
             </div>
-            <div class="footer col-sm-6 container fixed-bottom" id="menu">
-                <button id="reload" type="button" class="btn btn-danger btn-lg ">
-                    <span ></span> Reload 
+            <div class="footer col-sm-6 container fixed-bottom ml-3" id="menu">
+                <button id="folga" type="button" class="btn btn-primary btn-lg  ">
+                    <span ></span> Folga 
                 </button>
                 <button id="apagar" type="button" class="btn btn-dark btn-lg ">
                     <span ></span> Apagar 
                 </button>
                 <button id="ajuda" type="button" class="btn btn-info btn-lg  ">
                     <span ></span> Ajuda 
+                </button>
+                <button id="reload" type="button" class="btn btn-danger btn-lg ">
+                    <span ></span> Reload 
                 </button>
             </div>
             <div class="col-sm-3 ">
