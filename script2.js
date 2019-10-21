@@ -5,18 +5,22 @@ var numberIntervaloFinal = 0 ;
 function iniciar() {
 	var btn0 = document.getElementsByTagName('button')[0];
 	btn0.onclick = function () {
+		
 		write(0) ;
 	}
 	var btn1 = document.getElementsByTagName('button')[1];
 	btn1.onclick = function () {
-		write(1) ;
+		
+		write(1) ;		
 	}
 	var btn2 = document.getElementsByTagName('button')[2];
 	btn2.onclick = function () {
+		var folgaclicada = false ;
 		write(2) ;
 	}
 	var btn3 = document.getElementsByTagName('button')[3];
 	btn3.onclick = function () {
+		
 		write(3) ;
 	}	
 	var btn4 = document.getElementsByTagName('button')[4];
@@ -26,9 +30,15 @@ function iniciar() {
     var btn4 = document.getElementById('reload');
 	btn4.onclick = function () {
 		document.location.reload(true);
+	}
+	var btn5 = document.getElementById('apagar');
+	btn5.onclick = function () {
+		apagar();
     }
     
 }
+
+
 
 function write(num){
 	click ++ ;
@@ -87,9 +97,11 @@ function write(num){
     tempoIntervalo();
 
 }
-
+var folgaclicada = 0 ;
 function writeFolga(){
-    click ++ ;
+	click ++ ;
+	folgaclicada ++ ;
+	
     let turno = "Folga" ;
     let tbody = document.getElementById("linha");
 
@@ -104,7 +116,7 @@ function writeFolga(){
     let txtDia = document.createTextNode(click);
     let TextoFolga = document.createTextNode(turno);
 
-    linha.style.backgroundColor="#6c757d";
+    linha.style.backgroundColor="#8FB399";
     linha.style.color="white";
     linha.style.width="400px";
 
@@ -119,9 +131,35 @@ function writeFolga(){
     colFolga.appendChild(TextoFolga);
     
 
-    tbody.appendChild(linha);
-
-
+	tbody.appendChild(linha);
+	
+	var minIntervalos = document.getElementById("minIntervalos");
+	minIntervalos.innerHTML +="<br>" ;
+}
+var vetMinIntervalor = [] ;
+function tempoIntervalo(){
+	
+    var minIntervalos = document.getElementById("minIntervalos");
+	var tempoIntervalo = numberIntervaloFinal - numberIntervaloInicio ;
+	vetMinIntervalor.push(tempoIntervalo+" ");
+    console.log("Tempo de intervalo "+tempoIntervalo);
+    minIntervalos.innerHTML = vetMinIntervalor ;
+}
+function apagar(){
+	
+	var linhas = document.getElementById("linha");
+	linhas.removeChild(linhas.childNodes[click]);
+	var minIntervalos = document.getElementById("minIntervalos");
+	if(folgaclicada<=0){
+		vetMinIntervalor.pop();
+		folgaclicada -- ;
+	}else{
+		folgaclicada -- ;
+	}
+	console.log("Cliques na folga: "+folgaclicada);
+	minIntervalos.innerHTML = vetMinIntervalor ;
+	click -- ;
+	
 }
 
 function entrada(turno){
@@ -176,29 +214,26 @@ function calculaIntervaloFinal(hora,inicio){
 	// console.log("horario final "+finalIntervalo)
 	return final ;
 }
-function tempoIntervalo(){
-    var minIntervalos = document.getElementById("minIntervalos");
-    var tempoIntervalo = numberIntervaloFinal - numberIntervaloInicio ;
-    console.log("Tempo de intervalo "+tempoIntervalo);
-    minIntervalos.innerHTML += tempoIntervalo+" " ;
 
-
-}
 
 
 function de(turno){
 	if(turno=="alfa"){
 		var hora = Math.round(Math.random()*(5-0));	
         var inicio = calculaIntervalo() ;
-        numberIntervaloInicio = inicio ;
+		numberIntervaloInicio = inicio ;
 		var number = ("0"+hora+":"+inicio);
         calculaIntervaloFinal(hora,inicio);
 		return number;
 	}else if(turno=="bravo") {
 		var hora = Math.round(Math.random()*(11-6)+6);	
         var inicio = calculaIntervalo() ;
-        numberIntervaloInicio = inicio ;
-		var number = ("0"+hora+":"+inicio);
+		numberIntervaloInicio = inicio ;
+		if(hora>0 && hora<10){
+			var number = ("0"+hora+":"+inicio);
+		}else{
+			var number = (hora+":"+inicio);
+		}
 		calculaIntervaloFinal(hora,inicio);	
 		return number;
 	}else if(turno=="charlie"){
