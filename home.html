@@ -9,86 +9,36 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
     <script src="script2.js"></script>
-    <style>
-        #menu{
-            position:  ;
-        }
-        #botoes{
-            width: 440px ;
-            top: 15%;
-            margin-left: -20px ;
-        }
-        #tabela{
-            padding-top: 130px ;
-            margin-bottom: 0px ;
-        }
-        .cabeca{
-            background-color:  #e9ecef ;
-        }
-        #nav {
-            background-color: #e9ecef ; 
-        }
-        #btn {
-            
-            font-size: 20px ;
-        }
-        #minIntervalos {
-            background-color: #e9ecef ;
-            padding-bottom: 80px ;
-        }
-        .inter {
-            background-color: #0056B3 ;
-        }
-        #footer {
-            
-            text-align: center ;
-            position: fixed ;
-            padding-top: 120px ;
-            padding-left: 30px ;
-        }
-        #tabela {
-            width: 420px ;
-        }
-        #corpo{
-            width: 450px ;
-        }
-        
-        
-    </style>  
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <!-- <header>
-        
-    </header> -->
 
     <div class="container-fluid" id="corpo">
             
         <div class="row">
                 
-            <div class="col-sm-3 col-xs-0">
+            <div class="">
                    
             </div>
-            <div class="cabeca col-sm-6 col-xs-12" id="menu">
+            <div class="cabeca" id="menu">
                 <sub>Versão Beta 1.1</sub>
                 <h1 style="padding-top: 20px ;">Auto Ponto Soft</h1>
-                <label>Ecolha um turno</label>
-                <div class="btn-group bg-dark" id="botoes">
-                    <button class="btn btn-outline-primary " id="btn">ALFA</button>
-                    <button class="btn btn-outline-primary " id="btn">BRAVO</button>
-                    <button class="btn btn-outline-primary " id="btn">CHARLIE</button>
-                    <button class="btn btn-outline-primary " id="btn">DELTA</button> 
-                </div>
+                <p>Ecolha um turno</p>
+                
             </div>
-            <div class="col-sm-2 col-xs-3">
+            <div class="">
                     
             </div>
-        </div>    
+        </div> <!-- header -->  
+        <nav class="btn-group bg-dark sticky-top col-sm-12" id="botoes">
+            <button class="btn btn-outline-primary " id="btn">ALFA</button>
+            <button class="btn btn-outline-primary " id="btn">BRAVO</button>
+            <button class="btn btn-outline-primary " id="btn">CHARLIE</button>
+            <button class="btn btn-outline-primary " id="btn">DELTA</button> 
+        </nav>
         <hr>
-        <div class="row"> 
-            <div class="col-sm-0">
-                    
-            </div>
-            <div id=""  class="col-sm-8 col-xs-12">
+        <div> 
+            <div class="tab">
                 <table class="table table-hover " id="tabela"> 
                     <thead>
                         <tr class="bg-primary">
@@ -106,32 +56,29 @@
                     </tbody>
                 </table>    
             </div>
-            <div class="col-sm-2">
-                    
-            </div>
-        </div>
+        </div><!-- Tabela -->
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6" id="minIntervalos">
                 <p>Tempo dos intervalos sequentes: </p>
             </div>
             <div class="col-sm-3"></div>
-        </div> 
+        </div> <!-- Tempo do intervalos -->
         <div class="row">
             <div class="col-sm-3">
                     
             </div>
-            <div class="footer col-sm-6 container fixed-bottom ml-3" id="menu">
-                <button id="folga" type="button" class="btn btn-primary btn-lg  ">
+            <div class="col-sm-6 container" id="menu">
+                <button id="folga" type="button" class="btn btn-primary btn-lg col-sm-3 ">
                     <span ></span> Folga 
                 </button>
-                <button id="apagar" type="button" class="btn btn-dark btn-lg ">
+                <button id="apagar" type="button" class="btn btn-dark btn-lg col-sm-3">
                     <span ></span> Apagar 
                 </button>
-                <button id="ajuda" type="button" class="btn btn-info btn-lg  ">
+                <button id="ajuda" type="button" class="btn btn-info btn-lg col-sm-3 ">
                     <span ></span> Ajuda 
                 </button>
-                <button id="reload" type="button" class="btn btn-danger btn-lg ">
+                <button id="reload" type="button" class="btn btn-danger btn-lg col-sm-3">
                     <span ></span> Reload 
                 </button>
             </div>
