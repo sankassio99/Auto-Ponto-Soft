@@ -7,6 +7,7 @@ O que ocorria era que a empresa exigia muito para que colocassemos:
 * Horarios variando no máximo 10 minutos do horario de entrar e 10 minutos de sair.
 * Não pode repetir o tempo de intervalo de um dia para o outro
 * Não pode colocar muitos horarios britânicos 
+* Não pode repetir horários 
 
 Quando não lembravamos de anotar na folha ou quando tinhamos que passar a limpo (reescrever) era um serviço muito trabalhoso que exigia muita atenção e tempo.
 Pensando nisso, o app atravez de metodos Math gera os horarios randomicamente dentro dos padrões exigidos pela empresa, facilitando para que não precisemos ficar calculando horarios nem contando intervalos para poder anotar na folha. 
