@@ -1,9 +1,6 @@
 body {
     background-color: #e9ecef ;
 }
-#botoes{
-    background-color: #0056B3;
-}
 #corpo {
     background-color: #e9ecef ;
     width: 600px ;
@@ -19,6 +16,7 @@ body {
     background-color: #e9ecef ; 
 }
 #btn {
+    background-color: #565656;
     font-size: 20px ;
 }
 #minIntervalos {
@@ -40,9 +38,9 @@ body {
     position: relative;
     justify-content: center;
     text-align: center;
+    color: #565656;
 
 }
-
 
 @media (max-width: 480px) { 
     #corpo {
@@ -54,10 +52,9 @@ body {
     
     }
     #botoes {
-        background-color: #0056B3;
         padding-left: 0px  ;
     }
-}
-
-@media (min-width: 290px) and (max-width: 480px) {
+    #tabela {
+        font-size: 14px ;
+    }
 }
